@@ -3,7 +3,6 @@ class GardenError(Exception):
         super().__init__(message)
 
 
-
 class PlantError(GardenError):
     pass
 
@@ -22,33 +21,34 @@ def error_generator(type: str) -> None:
 
     return
 
+
 def tests() -> None:
     # =====Test 1=====
     try:
-        error_generator("hello") 
+        error_generator("hello")
     except GardenError as e:
         print(e)
     # =====Test 2=====
     print("\nTesting PlantError...")
     try:
-        error_generator("Tomato") 
+        error_generator("Tomato")
     except PlantError as e:
         print(f"Caught PlantError: {e}")
     # =====Test 3=====
     print("\nTesting WaterError...")
     try:
-        error_generator("Water") 
+        error_generator("Water")
     except WaterError as e:
         print(f"Caught PlantError: {e}")
     # =====Test 4=====
-    print("\nTesting catching all garden errors...")
+    print("Testing catching all garden errors...")
     try:
-        error_generator("Tomato") 
+        error_generator("Tomato")
     except GardenError as e:
         print(f"Caught GardenError: {e}")
     # =====Test 5=====
     try:
-        error_generator("Water") 
+        error_generator("Water")
     except GardenError as e:
         print(f"Caught GardenError: {e}")
 
@@ -56,6 +56,3 @@ def tests() -> None:
 print("=== Custom Garden Errors Demo ===")
 tests()
 print("\nAll custom error types work correctly!")
-
-
-
