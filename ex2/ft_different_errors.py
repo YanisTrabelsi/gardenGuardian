@@ -26,6 +26,7 @@ def test_error_types() -> None:
     print("Operation completed successfully")
 
 
-print("=== Garden Error Types Demo ===")
-test_error_types()
-print("\nAll error types tested successfully!")
+if __name__ == "__main__":
+    print("=== Garden Error Types Demo ===")
+    test_error_types()
+    print("\nAll error types tested successfully!")

@@ -53,6 +53,7 @@ def tests() -> None:
         print(f"Caught GardenError: {e}")
 
 
-print("=== Custom Garden Errors Demo ===")
-tests()
-print("\nAll custom error types work correctly!")
+if __name__ == "__main__":
+    print("=== Custom Garden Errors Demo ===")
+    tests()
+    print("\nAll custom error types work correctly!")

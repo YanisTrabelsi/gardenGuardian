@@ -12,6 +12,7 @@ def test_temperature() -> None:
         print(f"Caught input_temperature error: {e}\n")
 
 
-print("=== Garden Temperature ===\n")
-test_temperature()
-print("All tests completed - program didn't crash!")
+if __name__ == "__main__":
+    print("=== Garden Temperature ===\n")
+    test_temperature()
+    print("All tests completed - program didn't crash!")

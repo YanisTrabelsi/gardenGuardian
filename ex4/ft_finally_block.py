@@ -39,6 +39,7 @@ def test_watering_system() -> None:
         print("Closing watering system\n")
 
 
-print("=== Garden Watering System ===\n")
-test_watering_system()
-print("Cleanup always happens, even with errors!")
+if __name__ == "__main__":
+    print("=== Garden Watering System ===\n")
+    test_watering_system()
+    print("Cleanup always happens, even with errors!")
