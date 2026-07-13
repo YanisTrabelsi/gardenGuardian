@@ -1,22 +1,22 @@
 class GardenError(Exception):
-    def __init__(self, message: str = "Unknown plant error") -> None:
+    def __init__(self, message: str = "Unknown garden error") -> None:
         super().__init__(message)
 
 
 class PlantError(GardenError):
-    pass
+    def __init__(self, message: str = "Unknown plant error") -> None:
+        super().__init__(message)
 
 
 class WaterError(GardenError):
-    pass
+    def __init__(self, message: str = "Unknown water error") -> None:
+        super().__init__(message)
 
 
 def error_generator(type: str) -> None:
-    type = type.lower()
-
-    if (type == "tomato"):
+    if (type == "Tomato"):
         raise PlantError("The tomato plant is wilting!")
-    if (type == "water"):
+    if (type == "Water"):
         raise WaterError("Not enough water in the tank!")
 
     return
@@ -39,7 +39,7 @@ def tests() -> None:
     try:
         error_generator("Water")
     except WaterError as e:
-        print(f"Caught PlantError: {e}")
+        print(f"Caught WaterError: {e}")
     # =====Test 4=====
     print("Testing catching all garden errors...")
     try:
